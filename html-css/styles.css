@@ -84,12 +84,11 @@ p {
     justify-content: center;
 }
 .box-one {
-    background-color: sandybrown;
+    /* background-color: sandybrown; */
     width: 20vw;
     height: 30vh;
     margin-left: 60%;
     margin-top: 60%;
-
 }
 .second-page {
     width: 100vw;
@@ -127,6 +126,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
 }
 
 
