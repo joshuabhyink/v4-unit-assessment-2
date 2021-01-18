@@ -9,6 +9,8 @@
 */
 
 //CODE HERE
+const myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
+
 
 
 ////////////////////PROBLEM 2////////////////////
@@ -21,6 +23,7 @@
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
+// const foundZ = [5][2][1]
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -37,6 +40,10 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
+const animals = [...forest, ...ocean, ...savannah, ...desert]
+
+
+
 
 
 /*
@@ -45,6 +52,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+const animalsCopy = [...animals, 'elephant']
 
 
 ////////////////////PROBLEM 4////////////////////
@@ -56,6 +64,15 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+function compareNums(num1, num2){
+    if(num1 > num2){
+        return num1
+    } else {
+        return num1
+    }
+}
+
+
 
   
 ////////////////////PROBLEM 5////////////////////
@@ -68,6 +85,11 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+const bestMovie = movie => {
+    return `${movie} is the best movie ever!`
+}
+
+
   
   
 ////////////////////PROBLEM 6////////////////////
@@ -76,6 +98,10 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+const jsNinja = str => {
+    return 'I am a JavaScript ninja!'
+}
+
   
 
 ////////////////////PROBLEM 7////////////////////
@@ -97,6 +123,9 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+delete gameInfo.rating
+
+
   
 
 ////////////////////PROBLEM 8////////////////////
@@ -119,6 +148,17 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+function evenShapes(object){
+    for(let key in shapes){
+        if(key % 2 === 0){
+            return shapes.key
+        } else {
+            delete shapes.key
+        }
+    }
+}
+
+
   
   
 ////////////////////PROBLEM 9////////////////////
@@ -161,6 +201,16 @@ const classes = [
 */
 
 //CODE HERE
+function changeClasses(classes){
+    for(let i = 0; i < classes.length; i++){
+        for(let key in classes){
+            if(classes[i].key === true){
+                return classes[i].key = false
+            }
+        }
+    }
+}
+
 
   
 ////////////////////PROBLEM 10////////////////////
@@ -177,6 +227,17 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
+function lettersCompare(){
+    for(let i = 0; i < lettersToPair.length; i++){
+        for(let j = pairsArray.length - 1; j >= 0; j--){
+            if(lettersToPair[i] === lettersToPair[i]){
+                return pairsArray.push(lettersToPair[i])
+            }
+        }
+    }
+}
+
+
 
     
 
@@ -194,6 +255,13 @@ let pairsArray = []
 */
 
 //CODE HERE
+function Dog(name, age, breed, tricks){
+    this.name = name
+    this.age = age
+    this.breed = breed
+    this.tricks = tricks
+}
+
 
 
 /*
@@ -203,6 +271,8 @@ let pairsArray = []
 */
 
 //CODE HERE
+const fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake'])
+
   
 
 ////////////////////PROBLEM 12////////////////////
@@ -213,6 +283,10 @@ let pairsArray = []
 */
 
 //CODE HERE
+function bark(){
+    `${this.name} says bark!`
+}
+
 
 
 /*
@@ -221,6 +295,7 @@ let pairsArray = []
 */
 
 //CODE HERE
+const fidoSpeak = bark.call(fido)
   
   
 ////////////////////PROBLEM 13////////////////////
@@ -232,7 +307,11 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+const tricks = []
+function teachTrick(trick){
+    tricks.push(this.tricks)
+}
+const teachStay = teachTrick.bind(fido, 'stay')
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -251,6 +330,10 @@ let pairsArray = []
 */
 
 //CODE HERE
+function dogIntro(treat, toy){
+    `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}`
+}
+
 
 
 /*
@@ -260,7 +343,8 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
+const fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])  
+
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -270,6 +354,13 @@ let pairsArray = []
 */
 
 //CODE HERE
+function Phone(brand, model, storage, color, sold){
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.sold = sold
+}
 
   
 /*
@@ -284,11 +375,11 @@ let pairsArray = []
 */
 
 //CODE HERE
-  // let phone1 = 
+  let phone1 = new Phone('iPhone', '12', 128, 'red', false)
   
-  // let phone2 = 
+  let phone2 = new Phone('iPhone', '11', 64, 'mint green', false)
   
-  // let phone3 = 
+  let phone3 = new Phone('iPhone', 'XR', 256, 'white', false)
   
 /*
     Last, add a prototype method to Phone.
@@ -299,5 +390,8 @@ let pairsArray = []
 */
 
 //CODE HERE
+Phone.prototype.sell = function sell(){
+    return this.sold = true && `${this.brand} ${this.model} has been sold.`
+}
 
   
